@@ -1,0 +1,9 @@
+.loading {
+  height: 40vh;
+  text-align: center;
+  margin-top: 20px;
+  &__title {
+    padding: 20px;
+    font-family: $font-default;
+  }
+}

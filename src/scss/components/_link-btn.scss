@@ -1,0 +1,18 @@
+.link-btn {
+  &__btn {
+    font-family: $font-default;
+    font-size: 15px;
+    padding: 12px 24px;
+    background-color: rgb(210, 42, 27);
+    color: $color-white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    margin: 15px 10px 10px;
+    &:hover {
+      background-color: darken(rgb(210, 42, 27), 10%);
+    }
+  }
+}

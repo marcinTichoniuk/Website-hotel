@@ -1,0 +1,26 @@
+.banner {
+  padding: 10px;
+  text-align: center;
+  background: rgba(0,0,0,0.7);
+  margin: 0 15px;
+  
+  &__title, &__subtitle {
+    color: $color-white;
+    padding: 10px;
+    font-family: $font-default;
+    letter-spacing: 2px;
+  }
+  &__subtitle {
+    padding: 0;
+    font-size: 18px;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      width: 70%;
+      height: 3px;
+      background-color: $color-white;
+      @include position($top: 110%, $left: 15%);
+    }
+  }
+}

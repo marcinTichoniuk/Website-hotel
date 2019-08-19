@@ -1,0 +1,12 @@
+.title {
+  text-align: center;
+  background-color: $color-white;
+  padding: 5px;
+  &__text {
+    font-family: $font-default;
+    letter-spacing: 2px;
+    @include media-q(large){
+      font-size: 30px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@mixin media-q($breakpoint){
+  $size: map-get($breakpoints, $breakpoint);
+  @if($size) {
+    @media #{$size} {
+      @content;
+    }
+  } @else {
+    @error '"#{$breakpoint}" - Nie rozpoznaję tej wartości';
+  }
+}
+
+@mixin position($type: absolute, $top: null, $left: null, $right: null){
+  position: $type;
+  top: $top;
+  left: $left;
+  right: $right;
+}
