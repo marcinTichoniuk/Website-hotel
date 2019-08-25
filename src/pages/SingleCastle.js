@@ -12,10 +12,6 @@ class SingleCastle extends Component {
 
   static contextType = CastleContext;
 
-  // componentDidMount() {
-  //   console.log('mount in single castle')
-  // }
-
   render() {
     // console.log('render in single castle')
     const value = this.context;
@@ -30,8 +26,9 @@ class SingleCastle extends Component {
         </div>
       )
     }
-    console.log(castle)
+
     const { name, images, description, freeAlcohol, haunted, continent, price, size, extras } = castle;
+
     const photos = images.map(img => (
       <div key={img} className="castle-section__images">
         <img className="castle-section__image" src={img} alt="castle" />

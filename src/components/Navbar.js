@@ -20,15 +20,17 @@ class Navbar extends Component {
     const { isOpen } = this.state;
 
     return (
-      <nav className="main-nav">
-        <div className="logo main-nav__logo">
-          <Link className="logo__link" to="/">CastleHoliday</Link>
-        </div>
-        <button className="main-nav__btn">
-          <FaGripLines onClick={this.handleToggle} className="main-nav__icon" />
-        </button>
-        <MobileMenu isOpen={isOpen} />
-      </nav>
+      <>
+        <nav className="main-nav">
+          <div className="logo main-nav__logo">
+            <Link className="logo__link" to="/">CastleHoliday</Link>
+          </div>
+          <button className="main-nav__btn">
+            <FaGripLines onClick={this.handleToggle} className="main-nav__icon" />
+          </button>
+        </nav>
+        <MobileMenu isOpen={isOpen} handleToggle={this.handleToggle} />
+      </>
     );
   }
 }
