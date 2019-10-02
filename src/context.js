@@ -22,7 +22,7 @@ class CastleProvider extends Component {
 
   componentDidMount() {
     // console.log('mount in context')
-    const castles = data;
+    const castles = [...data];
     const filteredCastles = [...castles].sort((a, b) => a.price - b.price);
     const premiumCastles = castles.filter(castle => castle.premium);
     const maxPrice = Math.max(...castles.map(castle => castle.price));
@@ -43,7 +43,7 @@ class CastleProvider extends Component {
   }
 
   getCastle = (slug) => {
-    const castle = [...this.state.castles].find(castle => castle.slug === slug);
+    const castle = this.state.castles.find(castle => castle.slug === slug);
     return castle;
   }
 
