@@ -1,6 +1,6 @@
 .main-nav {
   height: 70px;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 15px;
   background-color: #000;
@@ -30,7 +30,9 @@
     @include position($type: fixed, $top: 70px, $left: 0, $right: 0);
     list-style: none;
     text-align: center;
-    width: 100%;
+    // width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
     background-color: #000;
     z-index: -1;
     transform: translate3d(0, -100vh, 0);
